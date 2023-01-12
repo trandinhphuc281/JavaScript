@@ -1,0 +1,33 @@
+//comment trong js
+- 1 dòng và nhiều dòng (Phím tắt Ctrl + /)
+- typeof(x): kiểm tra kiểu dữ liệu
+//Hàm built-in
+- alert(x): cửa sổ hiển thị thông báo
+- console:
+- confirm(''):
+- prompt(''):
+- setTimeout((hàm), time): thực thi câu lênh sau khoảng thời gian
+- setInterval((hàm), time): Thực thi câu lệnh liên tục sau khoảng thời gian
+//Toán tử
+- Số học: +, -, *, /, **, %, ++, --
+- Gán: =, +=, -=, *=, /=, **=
+- So sánh: ==, !=, >, <, >=, <=
+- Logic: &&(and), ||(or), !(not)
+//Kiểu dữ liệu
+=kiểu dữ liệu nguyên thủy
+- Number:
+- String:
+- boolean: true, false
+- Undefined:
+- Null:
+- Symbol:
+=kiểu dữ kiệu phức tạp
+- function
+- object
+
+//câu lệnh điều kiện if else
+if(điều kiện){
+	//đúng
+} else{
+	//sai
+}
