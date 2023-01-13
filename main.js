@@ -6,17 +6,16 @@ btnSubmit.addEventListener('click', function (e) {
         const text_name = document.getElementById("text_name");
         // console.log(text_name.value);
         const error = document.getElementById("error");
-        if (text_name.value == "") {
+        if (text_name.value.trim() == "") {
             error.innerHTML = "Khong duoc de trong";
             document.getElementById("text_name").style.border = "1px solid red";
-            document.getElementById("onSubmit").disabled = true;
+            // document.getElementById("onSubmit").disabled = true;
         } else {
             error.innerHTML = "";
             document.getElementById("text_name").style.border = "1px solid green";
-            document.getElementById("onSubmit").disabled = false;
-        }
-        const elemen = document.createElement("p");
-        elemen.innerHTML = `<div class="content"><p>${text_name.value}</p>
+            // document.getElementById("onSubmit").disabled = false;
+            const elemen = document.createElement("p");
+            elemen.innerHTML = `<div class="content"><p>${text_name.value}</p>
             <div class="icon_edit">
                 <svg id="update" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                     <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
@@ -29,15 +28,17 @@ btnSubmit.addEventListener('click', function (e) {
                 </svg>
             </div>
             </div>`;
-        const colum = document.getElementById("columns");
-        colum.appendChild(elemen);
+            const colum = document.getElementById("columns");
+            colum.appendChild(elemen);
+            text_name.value = "";
+        }
     }
     else {
         const forcus = document.querySelector('.edit')
         forcus.innerHTML = text_name.value;
         forcus.classList.remove('edit');
         checkEdit = false;
-        text_name = "" 
+        text_name.value ="";
     }
 
     //delete
@@ -59,7 +60,7 @@ btnSubmit.addEventListener('click', function (e) {
             // console.log(postEdit);
             text_name.value = postEdit.textContent;
             postEdit.classList.add("edit");
-            
+
 
         }
     }
